@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #6F4E37; /* coffee brown */
+    --secondary-color: #C19A6B; /* lighter coffee */
+    --accent-color: #D4AF37; /* gold */
+    --background-color: #F5F5F5; /* off-white */
+    --text-color: #333333;
+    --light-text: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.machine {
+    display: flex;
+    gap: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 2rem;
+    border-radius: 10px;
+    color: var(--light-text);
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu li {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#menu li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--light-text);
+}
+
+input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #E5C100;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#money-display {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+}
+
+#output, #report-output {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+#message {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+#coffee-selection button {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--light-text);
+}
+
+#coffee-selection button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .machine {
+        flex-direction: column;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    animation: fadeIn 1s ease-out;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}

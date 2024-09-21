@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Coffee Machine</h1>
+        <div class="machine">
+            <div class="left-panel">
+                <div id="menu">
+                    <h2>Menu</h2>
+                    <ul>
+                        <li>ESPRESSO: $1.50</li>
+                        <li>LATTE: $2.50</li>
+                        <li>CAPPUCCINO: $3.00</li>
+                    </ul>
+                </div>
+                <div id="coin-input">
+                    <h2>Insert Coins</h2>
+                    <input type="number" id="two-euro" placeholder="Two Euro coins">
+                    <input type="number" id="one-euro" placeholder="One Euro coins">
+                    <input type="number" id="fifty-cent" placeholder="50 Cent coins">
+                    <input type="number" id="ten-cent" placeholder="10 Cent coins">
+                    <button id="insert-coins">Insert Coins</button>
+                </div>
+                <div id="current-money">
+                    <h2>Current Money: <span id="money-display">$0.00</span></h2>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div id="coffee-selection">
+                    <h2>Select Coffee</h2>
+                    <button id="espresso">Espresso</button>
+                    <button id="latte">Latte</button>
+                    <button id="cappuccino">Cappuccino</button>
+                </div>
+                <div id="output">
+                    <h2>Output</h2>
+                    <p id="message"></p>
+                </div>
+                <div id="report">
+                    <h2>Machine Status</h2>
+                    <button id="show-report">Show Report</button>
+                    <div id="report-output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
